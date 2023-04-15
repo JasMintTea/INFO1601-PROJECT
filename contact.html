@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Us</title>
+
+     <link href="home.css" rel="stylesheet">
+    
+      <style>
+        
+        body{
+          position: relative;
+        }
+        aside{
+          margin-bottom: 150px;
+        }
+        header{
+          background-color: black;
+        }
+        
+        label {
+          display: inline-block;
+          font-weight: bold;
+           margin-bottom: 0.5rem;
+        }
+
+          input[type="text"],
+          input[type="email"],
+          input[type="tel"],
+          textarea {
+              display: block;
+              width: 100%;
+              padding: 0.5rem;
+              border: 1px solid #ccc;
+              border-radius: 0.25rem;
+              font-size: 1rem;
+               margin-bottom: 1rem;
+              }
+
+              button[type="submit"] {
+                  display: inline-block;
+                  background-color: orange;
+                  color: white;
+                  border: none;
+                  border-radius: 0.25rem;
+                  font-size: 1rem;
+                  padding: 0.75rem 1.5rem;
+                  cursor: pointer;
+                }
+
+              .footer-dis{
+                position: relative;
+              }
+  <div>
+        </style>
+  </head>
+  <body>
+
+    <aside>
+    <div class="top-page-main">
+
+      <header>
+
+        <a href="#" class="logo"><span>TheKitchenTable</span>
+
+          <ul class="navbar">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+      </header>
+
+    </div>
+  </aside>
+
+    <!--Contact Us Section --->
+    
+    <h1>Contact Us</h1>
+<form id="contact_form" name="contact_form" method="post">
+    <div class="mb-5 row">
+        <div class="col">
+            <label>First Name</label>
+            <input type="text" required maxlength="50" class="form-control" id="first_name" name="first_name">
+        </div>
+        <div class="col">
+            <label>Last Name</label>
+            <input type="text" required maxlength="50" class="form-control" id="last_name" name="last_name">
+        </div>
+    </div>
+    <div class="mb-5 row">
+        <div class="col">
+            <label for="email_addr">Email address</label>
+            <input type="email" required maxlength="50" class="form-control" id="email_addr" name="email"
+                placeholder="name@example.com">
+        </div>
+        <div class="col">
+            <label for="phone_input">Phone</label>
+            <input type="tel" required maxlength="50" class="form-control" id="phone_input" name="Phone"
+                placeholder="Phone">
+        </div>
+    </div>
+    <div class="mb-5">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary px-4 btn-lg">Post</button>
+</form>
+    <script>
+      const form = document.querySelector('form');
+      const nameInput = document.querySelector('#name');
+      const emailInput = document.querySelector('#email');
+      const messageInput = document.querySelector('#message');
+      const submitBtn = document.querySelector('#submit-btn');
+
+      form.addEventListener('submit', e => {
+        e.preventDefault(); // prevent the form from submitting
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+        console.log(data); // or send data to server using AJAX or fetch
+        alert('Thank you for contacting us!');
+        form.reset();
+      });
+    </script>
+  </body>
+
+  <footer class="footer-dis">
+  <div>
+    <h3>TheKitchenTable</h3>
+    <p class="footer-links">
+      <a href="index.html">Home</a>
+      |
+      <a href="#">About us</a>
+      |
+      <a href="recipe.html">Recipes</a>
+    </p>
+    <p class="web-name">Copyright © 2023 <strong>TheKitchenTable </strong>All rights reserved.
+    </p>
+
+    <div class="footer-icons">
+      <a href"#"><i class="ri-instagram-line"></i></a>
+      <a href"#"><i class="ri-facebook-circle-fill"></i></a>
+      <a href"#"><i class="ri-whatsapp-line"></i></a>
+      <a href"#"><i class="ri-twitter-fill"></i></a>
+
+    </div>
+  </div>
+
+</footer>
+  
+</html>
+
+
+  
+
+

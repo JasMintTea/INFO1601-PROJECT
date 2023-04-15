@@ -1,0 +1,347 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  text-decoration:none;
+  list-style: none;
+   
+}
+
+:root{
+  --bg-color:#222327;
+  --text-color:white;
+  --main-color:coral;
+}
+
+body{
+
+  background: #222327;
+  color:(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height:100vh;
+}
+
+.top-page-main {
+  background-image: url("https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  z-index: -1;
+  height: 60%;
+  width: 100%;
+  padding-bottom: 130px;
+}
+
+
+/* NAV STYLES */
+header{
+  position: fixed;
+  width:100%;
+  top:0;
+  right: 0;
+  z-index: 9999;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background-color: black;
+  padding: 28px 40px;
+}
+
+.logo{
+  color: var(--text-color);
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.navbar{
+  display: flex;
+}
+
+.navbar a{
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.navbar a:hover{
+  color: var(--main-color);
+}
+
+#menu-icon{
+  font-size: 35px;
+  color: var(--text-color);
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+
+/* For devices with a maximum width of 768px */
+@media (max-width: 768px) {
+  
+  header {
+    padding: 14px 2%;
+  }
+  .navbar {
+    flex-direction: column;
+    display: none;
+  }
+  .navbar a {
+    display: block;
+    margin: 12px 0;
+    padding: 0px 25px;
+    transition: all .50s ease;
+  }
+  .navbar a:hover {
+    color: var(--main-color);
+    transform: translateY(5px);
+  }
+  .navbar a:active {
+    color: var(--text-color);
+  }
+  #menu-icon {
+    display: block;
+  }
+}
+
+/* For devices with a maximum width of 1090px */
+@media (max-width: 1090px) {
+  .navbar a {
+    padding: 5px 0;
+    margin: 0px 20px;
+  }
+}
+
+
+
+.navbar a{
+  display: block;
+  margin:12px 0;
+  padding:0px 25px;
+  transition: all .50s ease ;
+}
+.navbar a:hover{
+  color: var(--main-color);
+  transform: translateY(5px);
+  
+  
+}
+.navbar a:active{
+  color:var(--text-color);
+}
+/* END OF NAV STYLES */
+
+/* SEARCH BAR STYLE */
+
+/* Center the search bar */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.formDiv{
+  padding: 50px;
+}
+
+/* Set the width of the search bar to at least 50% */
+#search {
+  position: relative;
+  z-index: 1;
+  width: 50%;
+  min-width: 200px;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  margin-top: 170px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+#search-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: coral;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  margin-left: 2px;
+  margin-top: 170px;
+  width: 88px;
+}
+/* END OF SEARCH BAR */
+
+/* FOOTER STYLES */
+/* footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8); 
+  color:white;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+} */
+
+
+/* main footer styles */
+.footer-dis {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  font: bold 16px;
+  background-color: rgba(0, 0, 0, 0.8); 
+  color:white;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.footer-dis h3 {
+  color: coral;
+}
+
+/* general anchor links text style */
+.footer-links a {
+  text-decoration: none;
+  color: white;
+}
+
+/* general anchor links text style w/ hover */
+.footer-links a:hover{
+  color:coral;
+}
+
+/* copyright text style */
+.web-name {
+  color: grey;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* social media icons hover style */
+.footer-icons a:hover{
+  color:coral;
+}
+
+/* pinned icon text */
+.foot-center i {
+  color: white;
+  width: 30%;
+  font-size: 15px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #626060;
+}
+
+.foot-center p span {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.foot-center p {
+  color: white;
+}
+
+.foot-center a {
+  color: #6f6de5;
+}
+
+.about-us {
+  font-size: 13px;
+  font-weight: normal;
+  color: white;
+}
+@media (max-width: 880px) {
+  
+}
+.search-result {
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  grid-gap: 25px;
+  grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+}
+.item {
+  width: 100%;
+  border-radius: 8px;
+  background-color: rgb(37, 37, 37);
+  padding: 15px;
+  overflow: hidden;
+}
+.item img {
+  width: 100%;
+  height: 300px;
+  border-radius: 4px;
+}
+/* .flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+.search-result .title {
+  color: whitesmoke;
+  margin: 20px 10px 0 0;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.view-btn {
+  text-decoration: none;
+  text-align: center;
+  width: 130px;
+  padding: 10px 0;
+  background-color: #404041;
+  color: whitesmoke;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 20px;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+/* END OF FOOTER STYLES */
+
+
+
+/*ABOUT US SECTION*/
+
+.section{
+  width:100%;
+  background-color: white;
+}
+
+.content-sec{
+  width:50%;
+  margin: 0 auto; 
+  text-align: center;
+} 
+.content p{
+  margin-top: 10px;
+  font-family:'Poppins',sans-serif;
+  font-size: 17px;
+  line-height:1.5;
+}  
+
+.title{
+  font-size: 19px;
+} 
+.social{ 
+  margin-top: 30px;
+
+}
+
+.social i{ 
+  color: var(--main-color);
+  font-size: 30px;
+  padding:0px 10px;
+  
+  
+} 
